@@ -1,0 +1,75 @@
+name: Auto Tweet
+
+on:
+  schedule:
+    # JST = UTC+9
+    - cron: "0 22 * * *" # 07:00 JST 朝
+    - cron: "0 3 * * *" # 12:00 JST 昼
+    - cron: "0 12 * * *" # 21:00 JST 夜
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "手動実行時の投稿枠"
+        required: true
+        default: "morning"
+        type: choice
+        options:
+          - morning
+          - noon
+          - night
+      dry_run:
+        description: "true にすると実際には投稿しない"
+        required: false
+        default: "false"
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-tweet
+  cancel-in-progress: false
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: npm ci
+
+      - name: Determine slot from schedule
+        id: slot
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "slot=${{ inputs.slot }}" >> "$GITHUB_OUTPUT"
+          else
+            case "${{ github.event.schedule }}" in
+              "0 22 * * *") echo "slot=morning" >> "$GITHUB_OUTPUT" ;;
+              "0 3 * * *") echo "slot=noon" >> "$GITHUB_OUTPUT" ;;
+              "0 12 * * *") echo "slot=night" >> "$GITHUB_OUTPUT" ;;
+            esac
+          fi
+
+      - name: Post tweet
+        env:
+          SLOT: ${{ steps.slot.outputs.slot }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+        run: npm run post
+
+      - name: Commit tweet log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/tweet-log.json
+          git diff --cached --quiet || git commit -m "chore: log tweet [skip ci]"
+          git push
