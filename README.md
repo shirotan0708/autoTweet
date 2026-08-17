@@ -18,16 +18,44 @@ Claude でその都度ツイート文を生成して X に投稿します。
 
 投稿だけであれば無料(Free)プランの範囲内で可能です(月1,500件までの投稿上限。今回は月90件程度なので余裕あり)。
 
-1. https://developer.twitter.com/ にアクセスし、投稿に使う `@reiruisoft0708` でログインして Developer アカウントを作成する
-2. Developer Portal でアプリ (Project + App) を作成する
-3. アプリの **User authentication settings** を編集し、
-   - App permissions: **Read and Write** に設定(これをしないと投稿できません)
-   - Type of App: `Web App, Automated App or Bot` などでOK
-   - Callback URL / Website URL は適当なダミーで可(例: `https://example.com`)
-4. **Keys and tokens** タブから以下4つを取得する
-   - API Key / API Key Secret
-   - Access Token / Access Token Secret
-     - ※ App permissions を Read and Write に変更した後に **再生成** しないと、古いトークンは Read-only のままなので注意
+1. **ログイン**
+   `@reiruisoft0708` で https://x.com にログインした状態で、https://developer.twitter.com/ にアクセスする。
+
+2. **Developer アカウントの申請 (Sign up)**
+   - 右上などから "Sign up" / "Apply" を選ぶと、利用目的を聞くフォームが出る
+   - アカウントの種類を聞かれたら **Free** プランを選ぶ
+   - 用途の説明欄には、個人アカウントで自分のツイートを自動投稿する用途である旨を記入する(前の回答で渡した文面を使えばOK)
+   - 電話番号認証を求められることがあるので、Xアカウントに電話番号を登録しておく
+   - 承認は即時〜数分で完了することが多い
+
+3. **Project と App を作成**
+   - Developer Portal (https://developer.twitter.com/en/portal/dashboard) に入る
+   - 初回は "Create Project" を促されるので、Project名(例: `reiruisoft-auto-tweet`)、Use case、App名(例: `reiruisoft-bot`)を適当に入力して作成する
+   - App を作成すると API Key / API Key Secret が一度だけ表示されるので、メモしておく(後でも再生成は可能)
+
+4. **App permissions を Read and Write に変更(最重要)**
+   - 作成した App の設定画面 → **"User authentication settings"**(日本語表示では「ユーザー認証設定」)の **Set up** / **Edit**(「設定する」/「編集」)を開く
+   - **App permissions**(「アプリの権限」): `Read and write`(「読み取りと書き込み」)を選択
+     - デフォルトは Read only(「読み取りのみ」)になっており、これだと投稿できないので必ず変更する
+   - **Type of App**(「アプリの種類」): `Web App, Automated App or Bot`(「ウェブアプリ、自動化されたアプリ、または Bot」)を選択
+   - **App info**(「アプリ情報」):
+     - Callback URI / Redirect URL(「コールバック URI / リダイレクト URL」): 使わないが必須項目なのでダミーで良い(例: `https://example.com/callback`)
+     - Website URL(「ウェブサイトの URL」): 例: `https://example.com`
+   - Save(「保存」)する
+
+5. **Access Token / Access Token Secret を取得**
+   - App の **"Keys and tokens"**(「キーとトークン」)タブを開く
+   - "Access Token and Secret"(「アクセストークンとシークレット」)の欄で **Generate**(「生成」、発行済みなら「再生成」)する
+   - **重要**: 手順4で App permissions を Read and Write に変更した**後**に生成/再生成しないと、古いトークンは Read only のままなので必ず変更後に(再)生成する
+   - 表示された Access Token / Access Token Secret をメモする
+
+6. **最終的に4つの値が揃う**
+   - API Key
+   - API Key Secret
+   - Access Token
+   - Access Token Secret
+
+   これらを次のステップで GitHub Secrets に登録する。
 
 ### 2. Anthropic API キーを取得する
 
