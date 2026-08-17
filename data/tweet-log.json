@@ -6,5 +6,13 @@
     "tweetId": null,
     "dryRun": true,
     "postedAt": "2026-08-17T08:34:10.452Z"
+  },
+  {
+    "text": "Claudeにリファクタリング頼んだら、意図まで汲んで変数名まで整えてくれた。ここまで来たかと素直に驚く夜。\n\n明日はこの余裕を設計の議論に使おう。",
+    "topic": "ai",
+    "slot": "night",
+    "tweetId": null,
+    "dryRun": true,
+    "postedAt": "2026-08-17T08:46:32.656Z"
   }
 ]
