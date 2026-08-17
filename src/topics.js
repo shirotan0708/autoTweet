@@ -3,7 +3,7 @@
 export const TOPICS = [
   {
     id: "freelance",
-    weight: 45,
+    weight: 55,
     label: "フリーランスエンジニアとしての仕事・学び・気づき",
     guidance:
       "フリーランスエンジニアとしての日々の仕事、案件探し、技術選定、クライアントワーク、" +
@@ -19,7 +19,7 @@ export const TOPICS = [
   },
   {
     id: "sauna",
-    weight: 10,
+    weight: 5,
     label: "サウナ",
     guidance:
       "サウナに行った感想、ととのい体験、サウナと仕事のオンオフの切り替えについて、" +
@@ -27,7 +27,7 @@ export const TOPICS = [
   },
   {
     id: "training",
-    weight: 10,
+    weight: 5,
     label: "筋トレ",
     guidance:
       "筋トレの記録、継続のコツ、デスクワークと運動の両立、体調管理について、" +
