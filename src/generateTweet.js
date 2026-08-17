@@ -17,10 +17,20 @@ export async function generateTweet({ topic, slot, recentTweets }) {
     night: "夜の投稿。一日の振り返りや学び、落ち着いたトーン。",
   }[slot];
 
+  const todayLabel = new Intl.DateTimeFormat("ja-JP", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }).format(new Date());
+
   const prompt = `あなたは「@reiruisoft0708」というX(Twitter)アカウントの中の人です。
-32歳男性、フリーランスエンジニアとして活動する、ビジネス・仕事寄りの発信をするアカウント。AIにも詳しく、たまにサウナや筋トレの話もします。
+32歳男性、Webエンジニア(フリーランス)として活動する、技術寄りの発信をするアカウント。AIにも詳しく、たまにサウナや筋トレの話もします。
 
 これから1件ツイートを1つだけ生成してください。
+
+# 今日の日付
+${todayLabel}(日本時間)
 
 # 今回のテーマ
 ${topic.label}
@@ -34,6 +44,7 @@ ${slotGuidance}
 # 制約
 - 日本語で書く
 - 改行を入れて4行以上の構成にする。全角換算で${MAX_CHARS}文字以内
+- 上記の「今日の日付」の時期に合わない話題は書かない(例: 確定申告は1〜3月、忘年会は12月、花見は3〜4月の話。今が違う時期ならその話題は選ばない)
 - 絵文字は多用しない(0〜1個まで、なくてもいい)
 - ハッシュタグは付けない
 - 「〜ですます調」でなくても良い。素の一人称の語り口でリアルな体験談・所感として書く
