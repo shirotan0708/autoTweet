@@ -1,6 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 
-const MAX_CHARS = 120; // 日本語は全角扱いなので余裕を持たせる
+const MAX_CHARS = 220; // 日本語は全角扱い。4行以上の複数行構成を想定した文字数
 
 export async function generateTweet({ topic, slot, recentTweets }) {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -33,7 +33,7 @@ ${slotGuidance}
 
 # 制約
 - 日本語で書く
-- 全角換算で${MAX_CHARS}文字以内(短くて簡潔な方が良い)
+- 改行を入れて4行以上の構成にする。全角換算で${MAX_CHARS}文字以内
 - 絵文字は多用しない(0〜1個まで、なくてもいい)
 - ハッシュタグは付けない
 - 「〜ですます調」でなくても良い。素の一人称の語り口でリアルな体験談・所感として書く
@@ -41,14 +41,14 @@ ${slotGuidance}
 - 32歳の実在する男性が、仕事の合間に素でつぶやいた感じにする。AIが書いたような整いすぎた文章・優等生的なまとめ・「〜だと思います」のような無難な締めは避ける
 - ビジネス系アカウントらしく、実体験に基づいた気づきや学びを軸にする。ただし説明的・啓発的になりすぎず、あくまで一人のつぶやきとして書く
 - 「〜だよね」「〜なんだよな」のような口語表現を適度に混ぜてもいいが、下品・過度にくだけた表現は避け、ビジネスの場でも違和感のない程度の砕け方にする
-- 一文で言い切る、体言止めにするなど、人が思わずつぶやいた感じの短さがあってもいい
 - 出力はツイート本文のみ。前置きや説明、鍵括弧は不要
 
 ツイート本文:`;
 
   const message = await client.messages.create({
     model: "claude-sonnet-5",
-    max_tokens: 300,
+    max_tokens: 500,
+    thinking: { type: "disabled" }, // 短文生成に推論は不要。トークン節約のため明示的にOFF
     messages: [{ role: "user", content: prompt }],
   });
 
