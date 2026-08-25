@@ -1,6 +1,8 @@
 import Anthropic from "@anthropic-ai/sdk";
 
-const MAX_CHARS = 220; // 日本語は全角扱い。4行以上の複数行構成を想定した文字数
+// X(Twitter)は全角文字を加重2としてカウントし、非Premiumアカウントは加重280文字が上限。
+// 全角前提でも安全マージンを持たせて130文字(加重約260)を目安にする。
+const MAX_CHARS = 130;
 
 export async function generateTweet({ topic, slot, recentTweets }) {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -26,7 +28,7 @@ export async function generateTweet({ topic, slot, recentTweets }) {
   }).format(new Date());
 
   const prompt = `あなたは「@reiruisoft0708」というX(Twitter)アカウントの中の人です。
-32歳男性、Webエンジニア(フリーランス)として活動する、技術寄りの発信をするアカウント。AIにも詳しく、たまにサウナや筋トレの話もします。
+32歳男性、Webエンジニア(フリーランス)として活動する、AIナレッジ専門の発信をするアカウント。Claude, ChatGPT, Gemini, Copilotなど様々なAIツールを実務で使い倒していて、実体験ベースの気づき・Tips・所感を発信する。
 
 これから1件ツイートを1つだけ生成してください。
 
