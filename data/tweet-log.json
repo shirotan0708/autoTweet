@@ -159,5 +159,13 @@
     "dryRun": false,
     "error": "weighted length 286 exceeds 280",
     "postedAt": "2026-08-25T23:25:00.742Z"
+  },
+  {
+    "text": "水曜の昼、Claude CodeにテストコードのTODOを一気に消化させてた。\n\n雑なケースまで律儀に書いてくるから、意図しないところで実行時間だけ伸びる。\n\n「網羅性より優先度」を先に伝えておくと、無駄なテストを削る手間が減る気がしてきた。\n\n午後はレビューの続きから。",
+    "topic": "ai-dev",
+    "slot": "noon",
+    "tweetId": "2092460848434249861",
+    "dryRun": false,
+    "postedAt": "2026-08-26T03:55:17.093Z"
   }
 ]
