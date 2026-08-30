@@ -4,7 +4,7 @@
 export const TOPICS = [
   {
     id: "ai-tools",
-    weight: 30,
+    weight: 20,
     label: "色々なAIツール・サービスの使い方や特徴",
     guidance:
       "Claude, ChatGPT, Gemini, Copilot, Perplexity, Midjourneyなど様々なAIツール・サービスについて、" +
@@ -13,7 +13,7 @@ export const TOPICS = [
   },
   {
     id: "ai-dev",
-    weight: 30,
+    weight: 25,
     label: "AIを使った開発・仕事の実務ナレッジ",
     guidance:
       "AIコーディングツール(Claude Code, Cursor, Copilotなど)を使った開発体験、" +
@@ -21,8 +21,19 @@ export const TOPICS = [
       "業務での活用シーンなどから1つの切り口を選んで書く。",
   },
   {
-    id: "ai-trend",
+    id: "claude-code-ext",
     weight: 25,
+    label: "Claude Codeの拡張機能・エコシステム活用",
+    guidance:
+      "Claude Codeのカスタムスラッシュコマンド、サブエージェント、フック(hooks)、" +
+      "MCPサーバー連携、カスタムスキル(Skills)、プラグイン、settings.jsonでのカスタマイズ、" +
+      "CLAUDE.mdの書き方、CLI/IDE拡張機能などについて、実際に設定・活用してみた体験や" +
+      "便利だった使い方、ハマったこと・工夫したことから1つの切り口を選んで書く。" +
+      "毎回違う機能・角度を選び、同じ機能ばかり取り上げない。",
+  },
+  {
+    id: "ai-trend",
+    weight: 20,
     label: "AI・生成AI業界のトレンドや新しい動き",
     guidance:
       "最近のAIモデルのアップデート、新しいAIサービス・エージェント、AI業界のニュースや変化について、" +
@@ -31,7 +42,7 @@ export const TOPICS = [
   },
   {
     id: "ai-basics",
-    weight: 15,
+    weight: 10,
     label: "AIに関する豆知識・基礎的なナレッジ",
     guidance:
       "生成AIの仕組み、LLMの特性や限界、プロンプトエンジニアリングの考え方、" +
