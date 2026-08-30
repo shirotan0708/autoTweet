@@ -2,6 +2,7 @@ import { TwitterApi } from "twitter-api-v2";
 import { generateTweet } from "./generateTweet.js";
 import { pickTopic } from "./topics.js";
 import { readLog, appendLog, recentTexts } from "./log.js";
+import { pickNextPlugin } from "./pluginRotation.js";
 
 const VALID_SLOTS = ["morning", "noon", "night"];
 const MAX_WEIGHTED_CHARS = 280; // X非Premiumアカウントの上限
@@ -23,7 +24,20 @@ async function main() {
     );
   }
 
-  const topic = pickTopic();
+  let topic = pickTopic();
+  let pluginId = null;
+  if (topic.id === "claude-code-plugins") {
+    const plugin = await pickNextPlugin();
+    pluginId = plugin.id;
+    topic = {
+      ...topic,
+      guidance:
+        `Claude Codeの公式プラグイン「${plugin.name}」を1つだけ取り上げて紹介する。` +
+        `これは${plugin.description}。プラグイン名は正確に書く。` +
+        "機能説明だけの紹介文にせず、実際に使ってみた体験や、便利だった/助かった具体的なシーンを交えて書く。",
+    };
+  }
+
   const log = await readLog();
   const text = await generateTweet({
     topic,
@@ -36,12 +50,13 @@ async function main() {
   }
   const weighted = weightedLength(text);
   console.log(
-    `[${slot}] topic=${topic.id}\n${text}\n(length: ${text.length}, weighted: ${weighted})`
+    `[${slot}] topic=${topic.id}${pluginId ? ` plugin=${pluginId}` : ""}\n${text}\n(length: ${text.length}, weighted: ${weighted})`
   );
   if (weighted > MAX_WEIGHTED_CHARS) {
     await appendLog(log, {
       text,
       topic: topic.id,
+      pluginId,
       slot,
       tweetId: null,
       dryRun: false,
@@ -73,6 +88,7 @@ async function main() {
       await appendLog(log, {
         text,
         topic: topic.id,
+        pluginId,
         slot,
         tweetId: null,
         dryRun: false,
@@ -86,6 +102,7 @@ async function main() {
   await appendLog(log, {
     text,
     topic: topic.id,
+    pluginId,
     slot,
     tweetId,
     dryRun,

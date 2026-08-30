@@ -4,7 +4,7 @@
 export const TOPICS = [
   {
     id: "ai-tools",
-    weight: 20,
+    weight: 15,
     label: "色々なAIツール・サービスの使い方や特徴",
     guidance:
       "Claude, ChatGPT, Gemini, Copilot, Perplexity, Midjourneyなど様々なAIツール・サービスについて、" +
@@ -13,7 +13,7 @@ export const TOPICS = [
   },
   {
     id: "ai-dev",
-    weight: 25,
+    weight: 20,
     label: "AIを使った開発・仕事の実務ナレッジ",
     guidance:
       "AIコーディングツール(Claude Code, Cursor, Copilotなど)を使った開発体験、" +
@@ -22,7 +22,7 @@ export const TOPICS = [
   },
   {
     id: "claude-code-ext",
-    weight: 25,
+    weight: 15,
     label: "Claude Codeの拡張機能・エコシステム活用",
     guidance:
       "Claude Codeのカスタムスラッシュコマンド、サブエージェント、フック(hooks)、" +
@@ -32,8 +32,17 @@ export const TOPICS = [
       "毎回違う機能・角度を選び、同じ機能ばかり取り上げない。",
   },
   {
+    id: "claude-code-plugins",
+    weight: 25,
+    label: "Claude Code公式プラグイン紹介",
+    // guidanceは実際の投稿時にプラグイン1件分の情報で上書きされる(postTweet.js参照)。
+    guidance:
+      "Claude Codeの公式プラグイン一覧(https://github.com/anthropics/claude-code/tree/main/plugins)から" +
+      "1つのプラグインを取り上げて、何ができるか・使うと何が嬉しいかを簡潔に紹介する。",
+  },
+  {
     id: "ai-trend",
-    weight: 20,
+    weight: 15,
     label: "AI・生成AI業界のトレンドや新しい動き",
     guidance:
       "最近のAIモデルのアップデート、新しいAIサービス・エージェント、AI業界のニュースや変化について、" +
