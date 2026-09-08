@@ -1,13 +1,5 @@
 [
   {
-    "text": "Perplexityで調べ物して、そのままChatGPTに要約投げる流れが定着してきた。\n\n検索と生成、得意分野が分かれてるだけで、無理に一つのツールで完結させる必要ないんだよな。\n\n適材適所、単純だけど徹底すると効く。",
-    "topic": "ai-tools",
-    "slot": "noon",
-    "tweetId": null,
-    "dryRun": true,
-    "postedAt": "2026-08-30T04:07:42.638Z"
-  },
-  {
     "text": "Claude Codeの公式プラグイン「agent-sdk-dev」、Agent SDKでの開発中に試したら地味に効いた。\n\nセットアップの対話コマンドで初期構成の迷いが減って、検証エージェントが実装の抜け漏れを先に拾ってくれる。\n\n自分で気づく前に指摘される感じ、ちょっと悔しいけど助かる。",
     "topic": "claude-code-plugins",
     "pluginId": "agent-sdk-dev",
@@ -267,5 +259,14 @@
     "tweetId": "2097232060859421176",
     "dryRun": false,
     "postedAt": "2026-09-08T07:54:22.853Z"
+  },
+  {
+    "text": "公式プラグインのfeature-dev、新機能の設計から品質レビューまで7フェーズで回してくれるやつ試した。\n\nコードベース分析の段階で既存の設計思想まで拾ってくるから、後工程で「ここ既存と違う」と自分で気づく前に潰せてる。\n\n工程を分けてくれるだけで安心感が段違いだった。",
+    "topic": "claude-code-plugins",
+    "pluginId": "feature-dev",
+    "slot": "night",
+    "tweetId": "2097311521495818286",
+    "dryRun": false,
+    "postedAt": "2026-09-08T13:10:07.752Z"
   }
 ]
