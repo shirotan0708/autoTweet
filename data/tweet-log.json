@@ -1,14 +1,5 @@
 [
   {
-    "text": "Claude Codeの公式プラグイン「agent-sdk-dev」、Agent SDKでの開発中に試したら地味に効いた。\n\nセットアップの対話コマンドで初期構成の迷いが減って、検証エージェントが実装の抜け漏れを先に拾ってくれる。\n\n自分で気づく前に指摘される感じ、ちょっと悔しいけど助かる。",
-    "topic": "claude-code-plugins",
-    "pluginId": "agent-sdk-dev",
-    "slot": "noon",
-    "tweetId": null,
-    "dryRun": true,
-    "postedAt": "2026-08-30T04:15:37.570Z"
-  },
-  {
     "text": "Copilotに複雑なロジックの実装頼んだら、動くには動くけど無駄に冗長なコードが返ってきた。\n\n「動く」と「良い」の間には結構な距離があるんだよな。\n\nそこを埋めるのが結局レビューする側の仕事で、AIは叩き台を出す係なんだと割り切ってる。",
     "topic": "ai-dev",
     "pluginId": null,
@@ -268,5 +259,14 @@
     "tweetId": "2097311521495818286",
     "dryRun": false,
     "postedAt": "2026-09-08T13:10:07.752Z"
+  },
+  {
+    "text": "公式プラグインのfrontend-design、AIっぽさ抜いた独自UI作れるやつ試した。\n\n配色やレイアウトの定石をあえて外す指針まで入ってて、量産型感のあるデザインから抜け出せた。\n\n見た目の説得力ってここまで指示で変わるんだな。",
+    "topic": "claude-code-plugins",
+    "pluginId": "frontend-design",
+    "slot": "morning",
+    "tweetId": "2097491200160768442",
+    "dryRun": false,
+    "postedAt": "2026-09-09T01:04:06.413Z"
   }
 ]
