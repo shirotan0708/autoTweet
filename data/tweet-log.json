@@ -1,14 +1,5 @@
 [
   {
-    "text": "claude-opus-4-5-migrationって公式プラグイン、Sonnet前提で書いたプロンプトをOpus 4.5用に調整するの試した。\n\nモデル文字列の書き換えだけかと思ったら、指示の冗長な部分まで削ってくれて地味に助かった。\n\n手作業でやってた地道な移行作業、これで結構浮きそう。",
-    "topic": "claude-code-plugins",
-    "pluginId": "claude-opus-4-5-migration",
-    "slot": "noon",
-    "tweetId": "2095055160993079654",
-    "dryRun": false,
-    "postedAt": "2026-09-02T07:44:09.569Z"
-  },
-  {
     "text": "Cursorの差分レビュー、変更行だけ見て承認してたら関係ない箇所まで巻き込まれてたことがあった。\n\n範囲が広いタスクほど、差分だけじゃなく周辺ファイルごと見返す手間を惜しんじゃいけないんだよな。\n\nスピード優先の代償、地味に効く。",
     "topic": "ai-dev",
     "pluginId": null,
@@ -269,5 +260,14 @@
     "dryRun": false,
     "error": "weighted length 318 exceeds 280",
     "postedAt": "2026-09-12T00:56:00.476Z"
+  },
+  {
+    "text": "MCPサーバー、Notion連携だけ入れて放置してたけど、Playwright MCP足したらブラウザ操作までClaude Codeから直接できて驚いた。\n\nスクショ撮らせて確認させる往復がなくなって、テスト工程がだいぶ短縮された。\n\n繋ぐ手間より繋がった後の恩恵の方が大きかった。",
+    "topic": "claude-code-ext",
+    "pluginId": null,
+    "slot": "noon",
+    "tweetId": "2098679447113134513",
+    "dryRun": false,
+    "postedAt": "2026-09-12T07:45:46.641Z"
   }
 ]
