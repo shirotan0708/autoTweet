@@ -1,14 +1,5 @@
 [
   {
-    "text": "Perplexityで調べ物すると、出典リンクまで一緒に返ってくるのが地味にありがたい。\n\nChatGPTだと自分で裏取りする手間があったけど、この一手間がなくなるだけで信頼度の確認が段違いに楽になる。\n\n用途で道具を変える発想、ようやく体に馴染んできた。",
-    "topic": "ai-tools",
-    "pluginId": null,
-    "slot": "morning",
-    "tweetId": "2094951281123070334",
-    "dryRun": false,
-    "postedAt": "2026-09-02T00:51:22.518Z"
-  },
-  {
     "text": "claude-opus-4-5-migrationって公式プラグイン、Sonnet前提で書いたプロンプトをOpus 4.5用に調整するの試した。\n\nモデル文字列の書き換えだけかと思ったら、指示の冗長な部分まで削ってくれて地味に助かった。\n\n手作業でやってた地道な移行作業、これで結構浮きそう。",
     "topic": "claude-code-plugins",
     "pluginId": "claude-opus-4-5-migration",
@@ -268,5 +259,15 @@
     "tweetId": "2098397704527228994",
     "dryRun": false,
     "postedAt": "2026-09-11T13:06:13.924Z"
+  },
+  {
+    "text": "各社のモデル更新の間隔、体感どんどん短くなってきてる気がする。\n\n前は「新モデル来た」って驚いてたのに、最近は「またか」くらいの温度感になってきた自分がいる。\n\n慣れって怖いな。\n\nでも慣れたからこそ、差分の小ささにちゃんと気づけるようになった面もある。\n\n進化の速度より、自分の感度が鈍らないようにする方が大事な気がしてる。",
+    "topic": "ai-trend",
+    "pluginId": null,
+    "slot": "morning",
+    "tweetId": null,
+    "dryRun": false,
+    "error": "weighted length 318 exceeds 280",
+    "postedAt": "2026-09-12T00:56:00.476Z"
   }
 ]
