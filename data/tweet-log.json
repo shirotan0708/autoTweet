@@ -1,14 +1,5 @@
 [
   {
-    "text": "ChatGPTに同じ質問を2回投げたら微妙に違う答えが返ってきて、最初は不具合かと思った。\n\n温度パラメータってやつが効いてるらしくて、そもそも毎回同じ答えを出す設計じゃないんだよな。\n\n再現性が欲しいときは条件固定するくらいの構えでいた方が良さそう。",
-    "topic": "ai-basics",
-    "pluginId": null,
-    "slot": "morning",
-    "tweetId": "2096761350060204523",
-    "dryRun": false,
-    "postedAt": "2026-09-07T00:43:56.573Z"
-  },
-  {
     "text": "公式プラグインのexplanatory-output-style、実装の理由まで解説してくれるやつ試した。\n\nなぜその設計にしたか毎回説明が付くから、コード読むだけで実装判断の背景まで理解できた。\n\nレビュー前に自分で答え合わせできる感覚、これ地味に良い。",
     "topic": "claude-code-plugins",
     "pluginId": "explanatory-output-style",
@@ -269,5 +260,14 @@
     "tweetId": "2103038342166184086",
     "dryRun": false,
     "postedAt": "2026-09-24T08:26:28.131Z"
+  },
+  {
+    "text": "同じ質問をClaudeとChatGPTに投げて回答を比較する作業、続けてるうちに気づいたことがある。\n\n違いより先に、自分の質問の粗さが目立ってくる。\n\nモデル比較のつもりが、いつの間にか自分のプロンプト力を試されてた。",
+    "topic": "ai-basics",
+    "pluginId": null,
+    "slot": "night",
+    "tweetId": "2103147980370911672",
+    "dryRun": false,
+    "postedAt": "2026-09-24T15:42:07.908Z"
   }
 ]
