@@ -4,7 +4,7 @@
 export const TOPICS = [
   {
     id: "ai-tools",
-    weight: 15,
+    weight: 10,
     label: "色々なAIツール・サービスの使い方や特徴",
     guidance:
       "Claude, ChatGPT, Gemini, Copilot, Perplexity, Midjourneyなど様々なAIツール・サービスについて、" +
@@ -13,7 +13,7 @@ export const TOPICS = [
   },
   {
     id: "ai-dev",
-    weight: 20,
+    weight: 15,
     label: "AIを使った開発・仕事の実務ナレッジ",
     guidance:
       "AIコーディングツール(Claude Code, Cursor, Copilotなど)を使った開発体験、" +
@@ -21,19 +21,35 @@ export const TOPICS = [
       "業務での活用シーンなどから1つの切り口を選んで書く。",
   },
   {
-    id: "claude-code-ext",
-    weight: 15,
-    label: "Claude Codeの拡張機能・エコシステム活用",
+    id: "engineering",
+    weight: 20,
+    label: "エンジニアリング・コードに関する実務ナレッジ",
     guidance:
-      "Claude Codeのカスタムスラッシュコマンド、サブエージェント、フック(hooks)、" +
-      "MCPサーバー連携、カスタムスキル(Skills)、プラグイン、settings.jsonでのカスタマイズ、" +
-      "CLAUDE.mdの書き方、CLI/IDE拡張機能などについて、実際に設定・活用してみた体験や" +
-      "便利だった使い方、ハマったこと・工夫したことから1つの切り口を選んで書く。" +
-      "毎回違う機能・角度を選び、同じ機能ばかり取り上げない。",
+      "設計、リファクタリング、命名、テスト、コードレビュー、レガシーコードとの付き合い方、" +
+      "パフォーマンスチューニング、デバッグで学んだことなど、AIに限らないエンジニアとしての" +
+      "実体験・気づき・失敗談から1つの切り口を選んで書く。",
+  },
+  {
+    id: "web-industry",
+    weight: 15,
+    label: "Web業界の技術トレンド・仕事にまつわる話",
+    guidance:
+      "フロントエンド/バックエンドの技術トレンド、フレームワークやインフラの動き、" +
+      "フリーランスとしての案件・働き方、Web業界特有の商習慣や現場あるあるなどから" +
+      "1つの切り口を選んで書く。具体的な日付や未確定の情報を断定的に書かない。",
+  },
+  {
+    id: "db-knowledge",
+    weight: 15,
+    label: "データベース・SQLに関する知識",
+    guidance:
+      "テーブル設計、正規化、インデックス、クエリチューニング、N+1問題、トランザクション、" +
+      "マイグレーション、RDB/NoSQLの使い分けなど、DBまわりで実務でハマったこと・学んだことから" +
+      "1つの切り口を選んで書く。",
   },
   {
     id: "claude-code-plugins",
-    weight: 25,
+    weight: 5,
     label: "Claude Code公式プラグイン紹介",
     // guidanceは実際の投稿時にプラグイン1件分の情報で上書きされる(postTweet.js参照)。
     guidance:
@@ -42,7 +58,7 @@ export const TOPICS = [
   },
   {
     id: "ai-trend",
-    weight: 15,
+    weight: 10,
     label: "AI・生成AI業界のトレンドや新しい動き",
     guidance:
       "最近のAIモデルのアップデート、新しいAIサービス・エージェント、AI業界のニュースや変化について、" +
