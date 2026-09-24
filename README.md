@@ -1,6 +1,6 @@
 # auto-tweet
 
-`@reiruisoft0708` 用の自動ツイートボット。GitHub Actions で毎日 **朝7時・昼12時・夜21時(JST)** に、
+`@reiruisoft0708` 用の自動ツイートボット。GitHub Actions で毎日 **朝8時・昼12時・夜20時(JST)** に、
 Claude でその都度ツイート文を生成して X に投稿します。
 
 話題は以下の重み付けでランダムに選ばれます([src/topics.js](src/topics.js) で調整可能)。
