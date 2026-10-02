@@ -1,14 +1,5 @@
 [
   {
-    "text": "learning-output-styleを試したら、コード書く前に「なぜその設計にするか」を毎回聞かれて地味に手が止まった。\n\n流れ作業で書いてた分岐処理、実は理由を説明できなかった。\n\n考えさせられるプラグイン、これは効く。",
-    "topic": "claude-code-plugins",
-    "pluginId": "learning-output-style",
-    "slot": "morning",
-    "tweetId": "2099667685399298495",
-    "dryRun": false,
-    "postedAt": "2026-09-15T01:12:40.927Z"
-  },
-  {
     "text": "plugin-devっていう公式プラグイン、自作プラグイン作るとき雛形からテストまで一通り面倒見てくれて助かった。\n\n構成で迷ってた時間がごっそり減った。\n\n自分で一から設計図描いてた頃には戻れない。",
     "topic": "claude-code-plugins",
     "pluginId": "plugin-dev",
@@ -268,5 +259,14 @@
     "tweetId": "2105953324834894108",
     "dryRun": false,
     "postedAt": "2026-10-02T09:29:34.140Z"
+  },
+  {
+    "text": "エージェント系の新サービス、どれも「人間の代わりに判断する」方向に寄ってきてる気がする。\n\nでも実務で使ってみると、判断させるより選択肢を並べさせる方が結局早い。\n\n任せる部分と残す部分、線引きのセンスが道具より先に問われてる。",
+    "topic": "ai-trend",
+    "pluginId": null,
+    "slot": "night",
+    "tweetId": "2106058831625085293",
+    "dryRun": false,
+    "postedAt": "2026-10-02T16:28:48.918Z"
   }
 ]
