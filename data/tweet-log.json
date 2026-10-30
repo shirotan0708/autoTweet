@@ -1,14 +1,5 @@
 [
   {
-    "text": "フリーランスの契約更新の話をクライアントとしてたら、「AI使ってる分、単価下げられないか」って言われた。\n\n使うツール増えたけど、判断の責任は減ってないんだよな。\n\n速さだけ見られると地味にきつい。",
-    "topic": "web-industry",
-    "pluginId": null,
-    "slot": "morning",
-    "tweetId": "2112357293325205740",
-    "dryRun": false,
-    "postedAt": "2026-10-20T01:36:39.191Z"
-  },
-  {
     "text": "N+1問題、クエリログ見て気づいたときの絶望感がすごい。\n\nORMが便利すぎて、裏で何百回もSELECT投げてるの忘れがち。\n\neager loading入れるだけで秒単位で速くなったりして、便利さの代償を定期的に払ってる気分になる。",
     "topic": "db-knowledge",
     "pluginId": null,
@@ -268,5 +259,14 @@
     "tweetId": "2115855702585405929",
     "dryRun": false,
     "postedAt": "2026-10-29T17:18:04.989Z"
+  },
+  {
+    "text": "Claude Codeの公式プラグイン「frontend-design」、試しにLP作らせたら明らかに毎回同じテンプレ感が消えてた。\n\n配色とレイアウトの提案に一癖あって、これAIが作ったって言われても気づかれない気がする。\n\n量産型UIから抜け出す選択肢、地味に貴重。",
+    "topic": "claude-code-plugins",
+    "pluginId": "frontend-design",
+    "slot": "morning",
+    "tweetId": "2115993565754974496",
+    "dryRun": false,
+    "postedAt": "2026-10-30T02:25:54.107Z"
   }
 ]
