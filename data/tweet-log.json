@@ -1,14 +1,5 @@
 [
   {
-    "text": "Perplexityに調べ物頼むと、答えより先に出典の質を確認する癖がついた。\n\nChatGPTだと生成物そのものを疑うのに、検索系は情報源から疑うようになる。\n\n同じ「調べる」でも、信頼の置き方がツールごとに違うの地味に発見だった。",
-    "topic": "ai-tools",
-    "pluginId": null,
-    "slot": "morning",
-    "tweetId": "2113803593652355120",
-    "dryRun": false,
-    "postedAt": "2026-10-24T01:23:44.075Z"
-  },
-  {
     "text": "Claude Codeにリファクタ頼んだら、関数名が変に説明的になって返ってきた。\n\n可読性重視なんだろうけど、`calculateTotalPriceWithTaxAndDiscount`とか見ると逆に目が滑る。\n\nAIの正しさと、人間の読みやすさは必ずしも一致しない。",
     "topic": "ai-dev",
     "pluginId": null,
@@ -268,5 +259,14 @@
     "tweetId": "2117355455630483572",
     "dryRun": false,
     "postedAt": "2026-11-02T20:37:33.968Z"
+  },
+  {
+    "text": "コードレビューで「これ動きますか?」って聞かれて、動くには動くけど自信ないコードって結構ある。\n\n通ったテストと、自分が納得してるコードは別物なんだよな。\n\nレビュアーの質問が一番の自己診断になる瞬間、たまにある。",
+    "topic": "engineering",
+    "pluginId": null,
+    "slot": "morning",
+    "tweetId": "2117464554544279937",
+    "dryRun": false,
+    "postedAt": "2026-11-03T03:51:05.190Z"
   }
 ]
