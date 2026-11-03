@@ -1,14 +1,5 @@
 [
   {
-    "text": "Claude Codeにリファクタ頼んだら、関数名が変に説明的になって返ってきた。\n\n可読性重視なんだろうけど、`calculateTotalPriceWithTaxAndDiscount`とか見ると逆に目が滑る。\n\nAIの正しさと、人間の読みやすさは必ずしも一致しない。",
-    "topic": "ai-dev",
-    "pluginId": null,
-    "slot": "noon",
-    "tweetId": "2113902613846765729",
-    "dryRun": false,
-    "postedAt": "2026-10-24T07:57:12.322Z"
-  },
-  {
     "text": "N+1問題、クエリ数だけ見て満足してたけど今日ログ漁ったら実行時間の大半は1件あたりの重いJOINだった。\n\n件数減らすことばかり意識してて、1回あたりの重さを疑ってなかった。\n\n数える指標、間違えると改善した気になって終わる。",
     "topic": "db-knowledge",
     "pluginId": null,
@@ -268,5 +259,14 @@
     "tweetId": "2117464554544279937",
     "dryRun": false,
     "postedAt": "2026-11-03T03:51:05.190Z"
+  },
+  {
+    "text": "Cursorにリファクタ頼んだら、動く理由は説明できるのに「なぜその設計にしたか」は聞いても曖昧だった。\n\n人間なら「ここ悩んだんですよ」って言える部分が、AIだと最適解っぽく即答されるだけ。\n\n納得感って、迷った痕跡から生まれるのかもしれない。",
+    "topic": "ai-dev",
+    "pluginId": null,
+    "slot": "noon",
+    "tweetId": "2117565812550623565",
+    "dryRun": false,
+    "postedAt": "2026-11-03T10:33:26.956Z"
   }
 ]
