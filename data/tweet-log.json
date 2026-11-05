@@ -1,14 +1,5 @@
 [
   {
-    "text": "Midjourneyで画像作るとき、プロンプト書く前に構図だけ頭に浮かべる癖がついた。\n\nChatGPTで文章作るときは逆で、まず言葉から入って絵が後からついてくる。\n\n入力の起点がツールごとに違うの、使い分けてて初めて気づいた。",
-    "topic": "ai-tools",
-    "pluginId": null,
-    "slot": "night",
-    "tweetId": "2114765855321903257",
-    "dryRun": false,
-    "postedAt": "2026-10-26T17:07:25.146Z"
-  },
-  {
     "text": "案件のキックオフで技術選定の話になって、久々に素の自分の判断基準だけで話した。\n\nAIに相談する前に一旦自分で考える癖、意識して戻さないと本当に消える。\n\n鈍る速度より、気づく速度の方が勝負な気がしてる。",
     "topic": "web-industry",
     "pluginId": null,
@@ -268,5 +259,14 @@
     "tweetId": "2118289664528306244",
     "dryRun": false,
     "postedAt": "2026-11-05T10:29:46.770Z"
+  },
+  {
+    "text": "Claude Codeの公式プラグイン「learning-output-style」、設計判断の場面で止まって理由を聞いてくるの地味にきつい。\n\n楽したくて入れたのに、逆に手を動かす羽目になった。\n\nでも後で見返すと、自分で言語化した部分だけちゃんと覚えてるんだよな。",
+    "topic": "claude-code-plugins",
+    "pluginId": "learning-output-style",
+    "slot": "night",
+    "tweetId": "2118410554675012019",
+    "dryRun": false,
+    "postedAt": "2026-11-05T18:30:09.203Z"
   }
 ]
