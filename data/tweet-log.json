@@ -1,14 +1,5 @@
 [
   {
-    "text": "Geminiに長い仕様書読ませて要約させたら、他のツールより圧倒的に文脈保持してた。\n\nChatGPTだと途中で論点ずれること多いけど、これは長文特化って感じ。\n\nツールごとに得意な入力の長さがある、地味に大事な見極め。",
-    "topic": "ai-tools",
-    "pluginId": null,
-    "slot": "night",
-    "tweetId": "2115855702585405929",
-    "dryRun": false,
-    "postedAt": "2026-10-29T17:18:04.989Z"
-  },
-  {
     "text": "Claude Codeの公式プラグイン「frontend-design」、試しにLP作らせたら明らかに毎回同じテンプレ感が消えてた。\n\n配色とレイアウトの提案に一癖あって、これAIが作ったって言われても気づかれない気がする。\n\n量産型UIから抜け出す選択肢、地味に貴重。",
     "topic": "claude-code-plugins",
     "pluginId": "frontend-design",
@@ -268,5 +259,14 @@
     "tweetId": "2119368806720024720",
     "dryRun": false,
     "postedAt": "2026-11-08T09:57:54.269Z"
+  },
+  {
+    "text": "ChatGPTとClaude、同じコーディング依頼しても返ってくる粒度が結構違う。\n\n片方はとにかく動くもの優先、もう片方は設計の理由まで説明してくる。\n\nどっちが正解とかじゃなくて、聞きたい気分で選んでる自分に気づいた。\n\nツール選びも結局、対話相手を選んでる感覚に近い。",
+    "topic": "ai-tools",
+    "pluginId": null,
+    "slot": "night",
+    "tweetId": "2119473684523921772",
+    "dryRun": false,
+    "postedAt": "2026-11-08T16:54:39.109Z"
   }
 ]
