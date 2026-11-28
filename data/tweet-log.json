@@ -1,14 +1,5 @@
 [
   {
-    "text": "Midjourneyで画像生成した後、同じプロンプトをCopilotにも投げてみたことがある。\n\n解釈の癖が全然違って、構図から質感まで別物が出てくる。\n\n一発で当てにいくより、複数に投げて見比べる方が結局早い。\n\n絵柄の好みって、言語化する前に選ぶ方が早いんだよな。",
-    "topic": "ai-tools",
-    "pluginId": null,
-    "slot": "noon",
-    "tweetId": "2123012970271625699",
-    "dryRun": false,
-    "postedAt": "2026-11-18T11:18:30.570Z"
-  },
-  {
     "text": "案件の見積もり出す時、工数より先に「このクライアントは仕様変更を何回言ってくるか」を読むようになった。\n\n技術的な難易度より、関係性のコストの方が結局効いてくる。\n\nフリーランス歴が長くなるほど、見積書に書けない変数が増えていく気がする。",
     "topic": "web-industry",
     "pluginId": null,
@@ -268,5 +259,15 @@
     "tweetId": "2126535011163668979",
     "dryRun": false,
     "postedAt": "2026-11-28T04:33:50.549Z"
+  },
+  {
+    "text": "Claude Agent SDKで自作ツール作るとき、公式プラグイン「agent-sdk-dev」のセットアップコマンド使ったら対話形式で構成組んでくれて初期設定の迷いがゼロになった。\n\n検証用エージェントも地味に優秀で、動かしてから気づくはずのバグを着手前に拾ってくれる。\n\n手探りで書いてた時間が無駄だったと実感した。",
+    "topic": "claude-code-plugins",
+    "pluginId": "agent-sdk-dev",
+    "slot": "noon",
+    "tweetId": null,
+    "dryRun": false,
+    "error": "weighted length 289 exceeds 280",
+    "postedAt": "2026-11-28T11:27:53.973Z"
   }
 ]
